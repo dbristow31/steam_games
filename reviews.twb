@@ -1,0 +1,3042 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20211.21.0511.0935                               -->
+<workbook original-version='18.1' source-build='2021.1.2 (20211.21.0511.0935)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (genres)' inline='true' name='federated.0hxqw0j0scnjzo134jx6n01oankp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='genres' name='excel-direct.165fta51gwgo6p1etg24d0e9t7fy'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/danie/OneDrive/Documents/data_science/databases/steam_games/genres.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.165fta51gwgo6p1etg24d0e9t7fy' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:J23:no:A1:J23:0' header='yes' outcome='6'>
+            <column datatype='date' date-parse-format='yyyy' name='y' ordinal='0' />
+            <column datatype='integer' name='action_games' ordinal='1' />
+            <column datatype='integer' name='adventure_games' ordinal='2' />
+            <column datatype='integer' name='action_adventure_games' ordinal='3' />
+            <column datatype='integer' name='strategy_games' ordinal='4' />
+            <column datatype='integer' name='rpg_games' ordinal='5' />
+            <column datatype='integer' name='sports_games' ordinal='6' />
+            <column datatype='integer' name='racing_games' ordinal='7' />
+            <column datatype='integer' name='puzzle_games' ordinal='8' />
+            <column datatype='integer' name='all_games' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.165fta51gwgo6p1etg24d0e9t7fy' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:J23:no:A1:J23:0' header='yes' outcome='6'>
+            <column datatype='date' date-parse-format='yyyy' name='y' ordinal='0' />
+            <column datatype='integer' name='action_games' ordinal='1' />
+            <column datatype='integer' name='adventure_games' ordinal='2' />
+            <column datatype='integer' name='action_adventure_games' ordinal='3' />
+            <column datatype='integer' name='strategy_games' ordinal='4' />
+            <column datatype='integer' name='rpg_games' ordinal='5' />
+            <column datatype='integer' name='sports_games' ordinal='6' />
+            <column datatype='integer' name='racing_games' ordinal='7' />
+            <column datatype='integer' name='puzzle_games' ordinal='8' />
+            <column datatype='integer' name='all_games' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:J23:no:A1:J23:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[y]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>y</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>action_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[action_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>action_games</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>adventure_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[adventure_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>adventure_games</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>action_adventure_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[action_adventure_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>action_adventure_games</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>strategy_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[strategy_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>strategy_games</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rpg_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rpg_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>rpg_games</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sports_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sports_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>sports_games</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>racing_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[racing_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>racing_games</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>puzzle_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[puzzle_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>puzzle_games</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>all_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[all_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>all_games</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_9404C7C78DD942EFB44F748374485F9D]' role='measure' type='quantitative' />
+      <column caption='Action Adventure Games' datatype='integer' name='[action_adventure_games]' role='measure' type='quantitative' />
+      <column caption='Action Games' datatype='integer' name='[action_games]' role='measure' type='quantitative' />
+      <column caption='Adventure Games' datatype='integer' name='[adventure_games]' role='measure' type='quantitative' />
+      <column caption='All Games' datatype='integer' name='[all_games]' role='measure' type='quantitative' />
+      <column caption='Puzzle Games' datatype='integer' name='[puzzle_games]' role='measure' type='quantitative' />
+      <column caption='Racing Games' datatype='integer' name='[racing_games]' role='measure' type='quantitative' />
+      <column caption='Rpg Games' datatype='integer' name='[rpg_games]' role='measure' type='quantitative' />
+      <column caption='Sports Games' datatype='integer' name='[sports_games]' role='measure' type='quantitative' />
+      <column caption='Strategy Games' datatype='integer' name='[strategy_games]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='date' name='[y]' role='dimension' type='quantitative' />
+      <column-instance column='[action_adventure_games]' derivation='Sum' name='[sum:action_adventure_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[action_games]' derivation='Sum' name='[sum:action_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[adventure_games]' derivation='Sum' name='[sum:adventure_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[all_games]' derivation='Sum' name='[sum:all_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[puzzle_games]' derivation='Sum' name='[sum:puzzle_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[racing_games]' derivation='Sum' name='[sum:racing_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[rpg_games]' derivation='Sum' name='[sum:rpg_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sports_games]' derivation='Sum' name='[sum:sports_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[strategy_games]' derivation='Sum' name='[sum:strategy_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[y]' derivation='Sum' name='[sum:y:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' palette='cyclic_10_0' type='palette'>
+            <map to='#1ba3c6'>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:adventure_games:qk]&quot;</bucket>
+            </map>
+            <map to='#25b392'>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:puzzle_games:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:all_games:qk]&quot;</bucket>
+            </map>
+            <map to='#4f7cba'>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_games:qk]&quot;</bucket>
+            </map>
+            <map to='#78ab30'>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:racing_games:qk]&quot;</bucket>
+            </map>
+            <map to='#c26abf'>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:strategy_games:qk]&quot;</bucket>
+            </map>
+            <map to='#e23b25'>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:sports_games:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:y:qk]&quot;</bucket>
+            </map>
+            <map to='#f8b11f'>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:rpg_games:qk]&quot;</bucket>
+            </map>
+            <map to='#f9608b'>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_adventure_games:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_9404C7C78DD942EFB44F748374485F9D'>
+            <properties context=''>
+              <relation connection='excel-direct.165fta51gwgo6p1etg24d0e9t7fy' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:J23:no:A1:J23:0' header='yes' outcome='6'>
+                  <column datatype='date' date-parse-format='yyyy' name='y' ordinal='0' />
+                  <column datatype='integer' name='action_games' ordinal='1' />
+                  <column datatype='integer' name='adventure_games' ordinal='2' />
+                  <column datatype='integer' name='action_adventure_games' ordinal='3' />
+                  <column datatype='integer' name='strategy_games' ordinal='4' />
+                  <column datatype='integer' name='rpg_games' ordinal='5' />
+                  <column datatype='integer' name='sports_games' ordinal='6' />
+                  <column datatype='integer' name='racing_games' ordinal='7' />
+                  <column datatype='integer' name='puzzle_games' ordinal='8' />
+                  <column datatype='integer' name='all_games' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Sheet1 (games)' inline='true' name='federated.0ucx1ek1qltylf191bkci16gfxf3' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='games' name='excel-direct.1quwwx20p3zmd519qfsfn1qr4zh2'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/danie/OneDrive/Documents/data_science/databases/steam_games/games.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1quwwx20p3zmd519qfsfn1qr4zh2' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:B23:no:A1:B23:0' header='yes' outcome='6'>
+            <column datatype='date' date-parse-format='yyyy' name='y' ordinal='0' />
+            <column datatype='integer' name='games_count' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.1quwwx20p3zmd519qfsfn1qr4zh2' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:B23:no:A1:B23:0' header='yes' outcome='6'>
+            <column datatype='date' date-parse-format='yyyy' name='y' ordinal='0' />
+            <column datatype='integer' name='games_count' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B23:no:A1:B23:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[y]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>y</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>games_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[games_count]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>games_count</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_AB0829D19C2240FBA9D603636F502D25]' role='measure' type='quantitative' />
+      <column caption='Games Count' datatype='integer' name='[games_count]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='date' name='[y]' role='dimension' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_AB0829D19C2240FBA9D603636F502D25'>
+            <properties context=''>
+              <relation connection='excel-direct.1quwwx20p3zmd519qfsfn1qr4zh2' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:B23:no:A1:B23:0' header='yes' outcome='6'>
+                  <column datatype='date' date-parse-format='yyyy' name='y' ordinal='0' />
+                  <column datatype='integer' name='games_count' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Sheet1 (indie)' inline='true' name='federated.1x2vtuw0k4nsdg15rrvj30udra88' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='indie' name='excel-direct.1fsbey0113ov3a14m2kv00u99rm0'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/danie/OneDrive/Documents/data_science/databases/steam_games/indie.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1fsbey0113ov3a14m2kv00u99rm0' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:D23:no:A1:D23:0' header='yes' outcome='6'>
+            <column datatype='date' date-parse-format='yyyy' name='y' ordinal='0' />
+            <column datatype='integer' name='indie_games' ordinal='1' />
+            <column datatype='integer' name='all_games' ordinal='2' />
+            <column datatype='real' name='percentage_indie_games' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.1fsbey0113ov3a14m2kv00u99rm0' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:D23:no:A1:D23:0' header='yes' outcome='6'>
+            <column datatype='date' date-parse-format='yyyy' name='y' ordinal='0' />
+            <column datatype='integer' name='indie_games' ordinal='1' />
+            <column datatype='integer' name='all_games' ordinal='2' />
+            <column datatype='real' name='percentage_indie_games' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D23:no:A1:D23:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[y]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>y</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>indie_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[indie_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>indie_games</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>all_games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[all_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>all_games</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>percentage_indie_games</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[percentage_indie_games]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>percentage_indie_games</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_03BA820047B84A1A84E32A7802C8897A]' role='measure' type='quantitative' />
+      <column caption='All Games' datatype='integer' name='[all_games]' role='measure' type='quantitative' />
+      <column caption='Indie Games' datatype='integer' name='[indie_games]' role='measure' type='quantitative' />
+      <column caption='Percentage Indie Games' datatype='real' name='[percentage_indie_games]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='date' name='[y]' role='dimension' type='quantitative' />
+      <column-instance column='[indie_games]' derivation='Avg' name='[avg:indie_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[indie_games]' derivation='Count' name='[cnt:indie_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[all_games]' derivation='Sum' name='[sum:all_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[indie_games]' derivation='Sum' name='[sum:indie_games:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[percentage_indie_games]' derivation='Sum' name='[sum:percentage_indie_games:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:all_games:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1x2vtuw0k4nsdg15rrvj30udra88].[avg:indie_games:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1x2vtuw0k4nsdg15rrvj30udra88].[cnt:indie_games:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_03BA820047B84A1A84E32A7802C8897A'>
+            <properties context=''>
+              <relation connection='excel-direct.1fsbey0113ov3a14m2kv00u99rm0' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:D23:no:A1:D23:0' header='yes' outcome='6'>
+                  <column datatype='date' date-parse-format='yyyy' name='y' ordinal='0' />
+                  <column datatype='integer' name='indie_games' ordinal='1' />
+                  <column datatype='integer' name='all_games' ordinal='2' />
+                  <column datatype='real' name='percentage_indie_games' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Sheet1 (reviews)' inline='true' name='federated.15rwzku145g6yr11www8o14ef927' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='reviews' name='excel-direct.0cw6e420jfyp8a11xyvje0bf09ld'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/danie/OneDrive/Documents/data_science/databases/steam_games/reviews.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0cw6e420jfyp8a11xyvje0bf09ld' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:D2516:no:A1:D2516:0' header='yes' outcome='6'>
+            <column datatype='integer' name='id' ordinal='0' />
+            <column datatype='string' name='game' ordinal='1' />
+            <column datatype='real' name='percent_positive_reviews' ordinal='2' />
+            <column datatype='integer' name='reviews_count' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.0cw6e420jfyp8a11xyvje0bf09ld' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:D2516:no:A1:D2516:0' header='yes' outcome='6'>
+            <column datatype='integer' name='id' ordinal='0' />
+            <column datatype='string' name='game' ordinal='1' />
+            <column datatype='real' name='percent_positive_reviews' ordinal='2' />
+            <column datatype='integer' name='reviews_count' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D2516:no:A1:D2516:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_2C75232A54204DDF8A9E043DFC80EAF6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[game]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>game</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_2C75232A54204DDF8A9E043DFC80EAF6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>percent_positive_reviews</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[percent_positive_reviews]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>percent_positive_reviews</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_2C75232A54204DDF8A9E043DFC80EAF6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reviews_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[reviews_count]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>reviews_count</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_2C75232A54204DDF8A9E043DFC80EAF6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='Percent Positive Reviews (bin)' datatype='integer' name='[Percent Positive Reviews (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[percent_positive_reviews]' peg='0' size='5' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_2C75232A54204DDF8A9E043DFC80EAF6]' role='measure' type='quantitative' />
+      <column caption='Game' datatype='string' name='[game]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Percent Positive Reviews' datatype='real' name='[percent_positive_reviews]' role='measure' type='quantitative' />
+      <column caption='Reviews Count' datatype='integer' name='[reviews_count]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_2C75232A54204DDF8A9E043DFC80EAF6'>
+            <properties context=''>
+              <relation connection='excel-direct.0cw6e420jfyp8a11xyvje0bf09ld' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:D2516:no:A1:D2516:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='string' name='game' ordinal='1' />
+                  <column datatype='real' name='percent_positive_reviews' ordinal='2' />
+                  <column datatype='integer' name='reviews_count' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='game_count'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Games Count by Release Date</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (games)' name='federated.0ucx1ek1qltylf191bkci16gfxf3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ucx1ek1qltylf191bkci16gfxf3'>
+            <column caption='Games Count' datatype='integer' name='[games_count]' role='measure' type='quantitative' />
+            <column-instance column='[games_count]' derivation='Sum' name='[sum:games_count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[y]' derivation='Year-Trunc' name='[tyr:y:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[y]' derivation='Year-Trunc' name='[tyr:y:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' name='[y]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ucx1ek1qltylf191bkci16gfxf3].[tyr:y:ok]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[tyr:y:ok]' />
+              <groupfilter function='member' level='[tyr:y:ok]' member='#2018-01-01 00:00:00#' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ucx1ek1qltylf191bkci16gfxf3].[tyr:y:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]' field-type='quantitative' max='6839' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='display' class='1' field='[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.0ucx1ek1qltylf191bkci16gfxf3].[tyr:y:qk]' scope='cols' value='Year' />
+            <format attr='title' class='0' field='[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]' scope='rows' value='# of Games' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]' num-steps='10' palette='red_green_gold_diverging_10_0' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-size' field='[federated.0ucx1ek1qltylf191bkci16gfxf3].[tyr:y:qk]' value='12' />
+            <format attr='font-size' field='[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]' value='12' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_1' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.7471270561218262' />
+                <format attr='mark-color' value='#212121' />
+                <format attr='mark-markers-mode' value='auto' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <text column='[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='11' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='mark-color' value='#2e8540' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk] + [federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk])</rows>
+        <cols>[federated.0ucx1ek1qltylf191bkci16gfxf3].[tyr:y:qk]</cols>
+        <annotations>
+          <annotation class='area' id='1' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run fontsize='12'>Each bar represents unique games released that year.  It is not a running total.</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2003-08-04 18:13:03.897#'>
+                  <node-reference>
+                    <axis>[federated.0ucx1ek1qltylf191bkci16gfxf3].[tyr:y:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='5300.2250000000004'>
+                  <node-reference>
+                    <axis>[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2009-05-14 13:52:43.363#'>
+                  <node-reference>
+                    <axis>[federated.0ucx1ek1qltylf191bkci16gfxf3].[tyr:y:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2637.8999999999996'>
+                  <node-reference>
+                    <axis>[federated.0ucx1ek1qltylf191bkci16gfxf3].[sum:games_count:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{12E40C26-6DDB-4DDD-938E-E46F8B4D11E1}' />
+    </worksheet>
+    <worksheet name='game_genres'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Games by Genre</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (genres)' name='federated.0hxqw0j0scnjzo134jx6n01oankp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hxqw0j0scnjzo134jx6n01oankp'>
+            <column caption='Action Adventure Games' datatype='integer' name='[action_adventure_games]' role='measure' type='quantitative' />
+            <column caption='Action Games' datatype='integer' name='[action_games]' role='measure' type='quantitative' />
+            <column caption='Adventure Games' datatype='integer' name='[adventure_games]' role='measure' type='quantitative' />
+            <column caption='Puzzle Games' datatype='integer' name='[puzzle_games]' role='measure' type='quantitative' />
+            <column caption='Racing Games' datatype='integer' name='[racing_games]' role='measure' type='quantitative' />
+            <column caption='Rpg Games' datatype='integer' name='[rpg_games]' role='measure' type='quantitative' />
+            <column caption='Sports Games' datatype='integer' name='[sports_games]' role='measure' type='quantitative' />
+            <column caption='Strategy Games' datatype='integer' name='[strategy_games]' role='measure' type='quantitative' />
+            <column-instance column='[action_adventure_games]' derivation='Sum' name='[sum:action_adventure_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[action_games]' derivation='Sum' name='[sum:action_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[adventure_games]' derivation='Sum' name='[sum:adventure_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[puzzle_games]' derivation='Sum' name='[sum:puzzle_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[racing_games]' derivation='Sum' name='[sum:racing_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rpg_games]' derivation='Sum' name='[sum:rpg_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sports_games]' derivation='Sum' name='[sum:sports_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[strategy_games]' derivation='Sum' name='[sum:strategy_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[y]' derivation='Year-Trunc' name='[tyr:y:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' name='[y]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:adventure_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:puzzle_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:racing_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:rpg_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:sports_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_adventure_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:strategy_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_games:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:adventure_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:puzzle_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:racing_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:rpg_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:sports_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_adventure_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:strategy_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_games:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]' field-type='quantitative' max='2200.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]' field-type='quantitative' max='#2018-01-29 00:00:00#' min='#2007-12-04 00:00:00#' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]' scope='cols' value='Year' />
+            <format attr='title' class='0' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]' scope='rows' value='Games Released Each Year' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' value='14' />
+            <format attr='text-align' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' value='center' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='total' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' value='14' />
+            <format attr='font-size' data-class='subtotal' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' value='14' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-size' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]' value='12' />
+            <format attr='font-size' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]' value='12' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <text column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' />
+              <text column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]' />
+              <lod column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' />
+              <color column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='10' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]</rows>
+        <cols>[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]</field>
+                  <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]</field>
+                  <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>#2018-01-01 00:00:00#</value>
+                <value>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_adventure_games:qk]&quot;</value>
+                <value>1390.0</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-65' y='7' />
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{974A16C7-4D5C-4AEF-8CB4-B1F49694B6F8}' />
+    </worksheet>
+    <worksheet name='game_genres_annotated'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Games by Genre</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (genres)' name='federated.0hxqw0j0scnjzo134jx6n01oankp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hxqw0j0scnjzo134jx6n01oankp'>
+            <column caption='Action Adventure Games' datatype='integer' name='[action_adventure_games]' role='measure' type='quantitative' />
+            <column caption='Action Games' datatype='integer' name='[action_games]' role='measure' type='quantitative' />
+            <column caption='Adventure Games' datatype='integer' name='[adventure_games]' role='measure' type='quantitative' />
+            <column caption='Puzzle Games' datatype='integer' name='[puzzle_games]' role='measure' type='quantitative' />
+            <column caption='Racing Games' datatype='integer' name='[racing_games]' role='measure' type='quantitative' />
+            <column caption='Rpg Games' datatype='integer' name='[rpg_games]' role='measure' type='quantitative' />
+            <column caption='Sports Games' datatype='integer' name='[sports_games]' role='measure' type='quantitative' />
+            <column caption='Strategy Games' datatype='integer' name='[strategy_games]' role='measure' type='quantitative' />
+            <column-instance column='[action_adventure_games]' derivation='Sum' name='[sum:action_adventure_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[action_games]' derivation='Sum' name='[sum:action_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[adventure_games]' derivation='Sum' name='[sum:adventure_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[puzzle_games]' derivation='Sum' name='[sum:puzzle_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[racing_games]' derivation='Sum' name='[sum:racing_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rpg_games]' derivation='Sum' name='[sum:rpg_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sports_games]' derivation='Sum' name='[sum:sports_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[strategy_games]' derivation='Sum' name='[sum:strategy_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[y]' derivation='Year-Trunc' name='[tyr:y:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' name='[y]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:adventure_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:puzzle_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:racing_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:rpg_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:sports_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_adventure_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:strategy_games:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_games:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:adventure_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:puzzle_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:racing_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:rpg_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:sports_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_adventure_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:strategy_games:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_games:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]' field-type='quantitative' max='2200.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]' field-type='quantitative' max='#2018-01-29 00:00:00#' min='#2007-12-04 00:00:00#' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]' scope='cols' value='Year' />
+            <format attr='title' class='0' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]' scope='rows' value='Games Released Each Year' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' value='14' />
+            <format attr='text-align' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' value='center' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='total' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' value='14' />
+            <format attr='font-size' data-class='subtotal' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' value='14' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-size' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]' value='12' />
+            <format attr='font-size' field='[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]' value='12' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <text column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' />
+              <text column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]' />
+              <lod column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' />
+              <color column='[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='10' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]</rows>
+        <cols>[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]</field>
+                  <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]</field>
+                  <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>#2018-01-01 00:00:00#</value>
+                <value>&quot;[federated.0hxqw0j0scnjzo134jx6n01oankp].[sum:action_adventure_games:qk]&quot;</value>
+                <value>1390.0</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-65' y='7' />
+          </mark-label>
+        </mark-labels>
+        <annotations>
+          <annotation class='area' id='0' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run fontname='Tableau Bold' fontsize='12'>Action games are the most numerous on Steam, with over 2,000,</run>
+              <run>Æ&#10;</run>
+              <run fontname='Tableau Bold' fontsize='12'>and puzzle games are the least numerous, with under 200.</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2011-09-20 17:02:01.907#'>
+                  <node-reference>
+                    <axis>[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1518.0925666199157'>
+                  <node-reference>
+                    <axis>[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2013-12-13 19:38:16.337#'>
+                  <node-reference>
+                    <axis>[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1049.0883590462834'>
+                  <node-reference>
+                    <axis>[federated.0hxqw0j0scnjzo134jx6n01oankp].[Multiple Values]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{6AFDFD85-A5FB-4439-A2CE-CED09E037448}' />
+    </worksheet>
+    <worksheet name='game_reviews'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Distribution of Games by Percentage of Positive Reviews</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (reviews)' name='federated.15rwzku145g6yr11www8o14ef927' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15rwzku145g6yr11www8o14ef927'>
+            <column aggregation='None' caption='Percent Positive Reviews (bin)' datatype='integer' name='[Percent Positive Reviews (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[percent_positive_reviews]' peg='0' size='5' />
+            </column>
+            <column-instance column='[id]' derivation='CountD' name='[ctd:id:qk]' pivot='key' type='quantitative' />
+            <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column-instance column='[Percent Positive Reviews (bin)]' derivation='None' name='[none:Percent Positive Reviews (bin):ok]' pivot='key' type='ordinal' />
+            <column caption='Percent Positive Reviews' datatype='real' name='[percent_positive_reviews]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.15rwzku145g6yr11www8o14ef927].[ctd:id:qk]' scope='rows' value='Number of Games' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='subtotal' field='[federated.15rwzku145g6yr11www8o14ef927].[none:Percent Positive Reviews (bin):ok]' value='9' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.15rwzku145g6yr11www8o14ef927].[none:Percent Positive Reviews (bin):ok]' value='11' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-size' field='[federated.15rwzku145g6yr11www8o14ef927].[ctd:id:qk]' value='12' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#4aa564' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15rwzku145g6yr11www8o14ef927].[ctd:id:qk]</rows>
+        <cols>[federated.15rwzku145g6yr11www8o14ef927].[none:Percent Positive Reviews (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.15rwzku145g6yr11www8o14ef927].[Percent Positive Reviews (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{8EE2DB8D-4936-404C-9942-E70EEE9C4F5D}' />
+    </worksheet>
+    <worksheet name='indie_games'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Rise of Indie Games</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (indie)' name='federated.1x2vtuw0k4nsdg15rrvj30udra88' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1x2vtuw0k4nsdg15rrvj30udra88'>
+            <column caption='Indie Games' datatype='integer' name='[indie_games]' role='measure' type='quantitative' />
+            <column caption='Percentage Indie Games' datatype='real' name='[percentage_indie_games]' role='measure' type='quantitative' />
+            <column-instance column='[indie_games]' derivation='Sum' name='[sum:indie_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[percentage_indie_games]' derivation='Sum' name='[sum:percentage_indie_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[y]' derivation='Year-Trunc' name='[tyr:y:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' name='[y]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]' scope='rows' value='% of All Games' />
+            <format attr='title' class='0' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]' scope='cols' value='Year' />
+            <encoding attr='space' class='0' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]' field-type='quantitative' max='#2018-12-31 00:00:00#' min='#2007-01-01 00:00:00#' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]' scope='rows' value='# of Indie Games' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]' value='12' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-size' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]' value='12' />
+            <format attr='font-size' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]' value='12' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#2e8540' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <text column='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='8' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#2e8540' />
+                <format attr='mark-transparency' value='206' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <text column='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='8' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#2e8540' />
+                <format attr='mark-transparency' value='206' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk] + [federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk])</rows>
+        <cols>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>23</value>
+                <value>15.862068965517</value>
+                <value>#2008-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>66</value>
+                <value>27.731092436973999</value>
+                <value>#2010-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>171</value>
+                <value>53.4375</value>
+                <value>#2012-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>911</value>
+                <value>58.585209003214999</value>
+                <value>#2014-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3183</value>
+                <value>72.987846824122002</value>
+                <value>#2016-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>4731</value>
+                <value>74.421897121282996</value>
+                <value>#2017-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>23</value>
+                <value>15.862068965517</value>
+                <value>#2008-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>66</value>
+                <value>27.731092436973999</value>
+                <value>#2010-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>171</value>
+                <value>53.4375</value>
+                <value>#2012-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>911</value>
+                <value>58.585209003214999</value>
+                <value>#2014-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='10' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3183</value>
+                <value>72.987846824122002</value>
+                <value>#2016-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='11' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</field>
+                  <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>4731</value>
+                <value>74.421897121282996</value>
+                <value>#2017-01-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{7A3612D7-3C9D-41DD-8D9D-2E83828A476D}' />
+    </worksheet>
+    <worksheet name='indie_games_annotated'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Rise of Indie Games</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (indie)' name='federated.1x2vtuw0k4nsdg15rrvj30udra88' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1x2vtuw0k4nsdg15rrvj30udra88'>
+            <column caption='Indie Games' datatype='integer' name='[indie_games]' role='measure' type='quantitative' />
+            <column caption='Percentage Indie Games' datatype='real' name='[percentage_indie_games]' role='measure' type='quantitative' />
+            <column-instance column='[indie_games]' derivation='Sum' name='[sum:indie_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[percentage_indie_games]' derivation='Sum' name='[sum:percentage_indie_games:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[y]' derivation='Year-Trunc' name='[tyr:y:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' name='[y]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]' scope='rows' value='Indie Games as % of All Games' />
+            <format attr='title' class='0' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]' scope='cols' value='Year' />
+            <encoding attr='space' class='0' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]' field-type='quantitative' max='#2018-12-31 00:00:00#' min='#2007-01-01 00:00:00#' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]' scope='rows' value='Number of Indie Games Released' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]' value='12' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-size' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]' value='12' />
+            <format attr='font-size' field='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]' value='12' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_1' value='#ffffffe6' />
+            <format attr='fill-color' id='annotation_2' value='#00000000' />
+            <format attr='fill-color' id='annotation_3' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#2e8540' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <text column='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#2e8540' />
+                <format attr='mark-transparency' value='206' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <text column='[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#2e8540' />
+                <format attr='mark-transparency' value='206' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk] + [federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk])</rows>
+        <cols>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</cols>
+        <annotations>
+          <annotation class='area' id='1' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontname='Tableau Bold' fontsize='12'>The chart excludes years before </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontname='Tableau Bold' fontsize='12'>2007; because before 2007, fewer than</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontname='Tableau Bold' fontsize='12'> 50 games were released each year.</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2007-01-29 03:46:41.927#'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='103.23033707865169'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2010-10-11 17:08:14.457#'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='63.707865168539321'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='2' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12'>As a percentage of all games </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12'>released annually, indie games </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12'>increased from 4.3% in 2007</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12'> to 79% in 2018.</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2014-09-21 16:52:06.513#'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='53.384831460674157'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2017-05-30 14:41:50.229#'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='13.272471910112364'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:percentage_indie_games:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='3' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12'>The number of indie games </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12'>released each year </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12'>increased from 4 in 2007 </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12'>to almost 6,500 in 2018.</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2015-11-07 08:57:07.139#'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2528.4943820224717'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2017-11-20 10:17:17.160#'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='209.12359550561811'>
+                  <node-reference>
+                    <axis>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{9C5EAF29-3B64-4422-AA2D-CE999482758B}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='steam_games_dashboard'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone h='49000' id='6' name='indie_games' w='49200' x='800' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='49000' id='7' name='game_reviews' w='49200' x='50000' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='49000' id='15' name='game_count' w='98400' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='17' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='16' param='vert' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='49000' id='15' is-fixed='true' name='game_count' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='6' is-fixed='true' name='indie_games' w='49200' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='7' is-fixed='true' name='game_reviews' w='49200' x='50000' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F618DB07-3C03-495E-815D-A8020B963A29}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='93'>
+    <window class='worksheet' name='game_genres_annotated'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]</field>
+            <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{378EA859-294E-43E1-B4FC-252538B78C82}' />
+    </window>
+    <window class='worksheet' name='game_genres'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[:Measure Names]</field>
+            <field>[federated.0hxqw0j0scnjzo134jx6n01oankp].[tyr:y:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CDBDD7A9-7B41-4B27-BECB-481E397979F5}' />
+    </window>
+    <window class='worksheet' name='game_count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ucx1ek1qltylf191bkci16gfxf3].[tyr:y:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4A309BF4-16A8-4584-8973-B4D7B20B1801}' />
+    </window>
+    <window class='worksheet' name='indie_games_annotated'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+            <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1D349969-677C-4241-AD96-B6860950B213}' />
+    </window>
+    <window class='worksheet' name='indie_games'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[sum:indie_games:qk]</field>
+            <field>[federated.1x2vtuw0k4nsdg15rrvj30udra88].[tyr:y:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CAC76656-D6F4-4FCB-98AA-5E2780CD6078}' />
+    </window>
+    <window class='worksheet' name='game_reviews'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15rwzku145g6yr11www8o14ef927].[none:Percent Positive Reviews (bin):ok]</field>
+            <field>[federated.15rwzku145g6yr11www8o14ef927].[none:id:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F6FFAE6D-259F-40B9-86BC-EA90D2107A11}' />
+    </window>
+    <window class='dashboard' maximized='true' name='steam_games_dashboard'>
+      <viewpoints>
+        <viewpoint name='game_count'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='game_reviews'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='indie_games'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='15' />
+      <simple-id uuid='{E1649C83-6DFB-4B60-843F-1C75E93FFE4D}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='game_count' width='192'>
+      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
+      AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='game_genres' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='game_genres_annotated' width='192'>
+      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
+      xbL29wAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='game_reviews' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='indie_games' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='indie_games_annotated' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='steam_games_dashboard' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
