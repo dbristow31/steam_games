@@ -1,0 +1,548 @@
+/* The purpose of this project is to display trends in video gaming by analyzing the 
+evolution of games on Steam.  Steam is a video game digital distribution service
+that was launched in 2003.
+
+The queries that follow focus on four aspects of video gaming on Steam:
+1. The increasing number of games released each year (measured by genre and as a total number of games)
+2. The increasing prevalence of indie games (games developed and financed independently) 
+3. The increasing number of games containing sexual content (although as a percent of all games, games containing sexual content remain rare)
+4. The percentage of positive reviews for games on Steam over time
+*/
+
+/* CREATE A TABLE FOR EACH OF THE TOP 8 GAME GENRES, CHARTING THEIR GROWTH OVER TIME
+1. action
+2. adventure 
+3. action_adventure
+4. role-playing
+5. strategy
+6. puzzle
+7. sports
+8. racing 
+*/
+
+--#1:
+
+--Create View action_genre_games AS
+--	WITH action_genre AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN action >= 20 AND adventure < 20 THEN t.appid END)) AS action_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			action_games,
+--			all_games,
+--			100.0 * action_games / all_games AS percentage_action_games
+--		FROM action_genre
+		--ORDER BY 1 ASC
+--#2:
+
+--Create View adventure_genre_games AS
+--	WITH adventure_genre AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN adventure >= 20 AND action < 20 THEN t.appid END)) AS adventure_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			adventure_games,
+--			all_games,
+--			100.0 * adventure_games / all_games AS percentage_adventure_games
+--		FROM adventure_genre
+		--ORDER BY 1 ASC
+
+--#3:
+
+--Create View action_adventure_genre_games AS
+--	WITH action_adventure_genre AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN (action >= 20 AND adventure >= 20) OR action_adventure >= 20 THEN t.appid END)) AS action_adventure_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			action_adventure_games,
+--			all_games,
+--			100.0 * action_adventure_games / all_games AS percentage_action_adventure_games
+--		FROM action_adventure_genre
+		--ORDER BY 1 ASC
+
+--#4: 
+
+--Create View rpg_genre_games AS
+--	WITH rpg_genre AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN rpg >= 20 AND strategy < 20 THEN t.appid END)) AS rpg_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			rpg_games,
+--			all_games,
+--			100.0 * rpg_games / all_games AS percentage_rpg_games
+--		FROM rpg_genre
+		--ORDER BY 1 ASC
+
+--#5:
+
+--Create View strategy_genre_games AS
+--	WITH strategy_genre AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN strategy >= 20 AND rpg < 20 THEN t.appid END)) AS strategy_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			strategy_games,
+--			all_games,
+--			100.0 * strategy_games / all_games AS percentage_strategy_games
+--		FROM strategy_genre
+		--ORDER BY 1 ASC
+
+--#6:
+
+--Create View puzzle_genre_games AS
+--	WITH puzzle_genre AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN puzzle >= 20 AND rpg < 20 AND strategy < 20 THEN t.appid END)) AS puzzle_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			puzzle_games,
+--			all_games,
+--			100.0 * puzzle_games / all_games AS percentage_puzzle_games
+--		FROM puzzle_genre
+		--ORDER BY 1 ASC
+
+--#7:
+
+--Create View sports_genre_games AS
+--	WITH sports_genre AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN sports >= 20 AND racing < 20 THEN t.appid END)) AS sports_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			sports_games,
+--			all_games,
+--			100.0 * sports_games / all_games AS percentage_sports_games
+--		FROM sports_genre
+		--ORDER BY 1 ASC
+
+--#8:
+
+--Create View racing_genre_games AS
+--	WITH racing_genre AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN racing >= 20 AND sports < 20 THEN t.appid END)) AS racing_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			racing_games,
+--			all_games,
+--			100.0 * racing_games / all_games AS percentage_racing_games
+--		FROM racing_genre
+		--ORDER BY 1 ASC
+
+--TABLE #1 FOR VISUALIZATION - GAMES BY GENRE OVER TIME
+--Create View all_genres AS
+--SELECT
+--	act.y,
+--	act.action_games AS action_games,
+--	adv.adventure_games AS adventure_games,
+--	aa.action_adventure_games AS action_adventure_games,
+--	stg.strategy_games AS strategy_games,
+--	rpg.rpg_games AS rpg_games,
+--	spo.sports_games AS sports_games,
+--	rac.racing_games AS racing_games,
+--	puz.puzzle_games AS puzzle_games,
+--	act.all_games AS all_games
+--FROM action_genre_games act
+--INNER JOIN
+--	adventure_genre_games adv
+--	ON adv.y = act.y
+--INNER JOIN
+--	action_adventure_genre_games aa
+--	ON aa.y = act.y
+--INNER JOIN
+--	strategy_genre_games stg 
+--	ON stg.y = act.y
+--INNER JOIN
+--	rpg_genre_games rpg
+--	ON rpg.y = act.y
+--INNER JOIN
+--	sports_genre_games spo
+--	ON spo.y = act.y
+--INNER JOIN
+--	racing_genre_games rac
+--	ON rac.y = act.y  
+--INNER JOIN
+--	puzzle_genre_games puz
+--	ON puz.y = act.y  
+--ORDER BY 1 ASC
+
+--TABLE #2 FOR VISUALIZATION - TOTAL GAMES ON STEAM BY RELEASE DATE
+
+--Create View games_released_each_year AS
+	--SELECT
+	--	DATEPART(YYYY, release_date) AS y,
+	--	COUNT(DISTINCT(appid)) AS games_count
+	--FROM games
+	--WHERE DATEPART(YYYY, release_date) < 2019
+	--GROUP BY DATEPART(YYYY, release_date)
+	--ORDER BY 1 ASC;
+
+--TABLE #3 FOR VISUALIZATION - NUMBER OF INDIE GAMES RELEASED EACH YEAR
+--Create View indie_games AS
+	--WITH indie_game_stats AS (
+	--	SELECT
+	--		DATEPART(YYYY, release_date) AS y,
+	--		COUNT(DISTINCT(CASE WHEN indie >= 20 THEN t.appid END)) AS indie_games,
+	--		COUNT(*) AS all_games
+	--	FROM games g
+	--	LEFT JOIN tags t
+	--	ON g.appid = t.appid
+	--	WHERE 
+	--		DATEPART(YYYY, release_date) < 2019
+	--	GROUP BY DATEPART(YYYY, release_date)
+	--	)
+	--	SELECT
+	--		y,
+	--		indie_games,
+	--		all_games,
+	--		100.0 * indie_games / all_games AS percentage_indie_games
+	--	FROM indie_game_stats
+	--	ORDER BY 1 ASC
+
+--TABLE #4 FOR VISUALIZATION - PERCENTAGE OF POSITIVE REVIEWS
+--GAMES RANKED BY PERCENTAGE OF POSITIVE REVIEWS
+--Create View percent_positive_reviews AS
+		--SELECT
+		--	ROW_NUMBER() OVER(ORDER BY ROUND(100.0 * positive_ratings / (positive_ratings + negative_ratings), 2)) AS id,
+		--	name AS game,
+		--	ROUND(100.0 * positive_ratings / (positive_ratings + negative_ratings), 2) AS percent_positive_reviews,
+		--	positive_ratings + negative_ratings AS reviews_count
+		--FROM games
+		--WHERE 
+		--	DATEPART(YYYY, release_date) < 2019
+		--	AND positive_ratings + negative_ratings >= 1000
+		--ORDER BY 1 ASC;
+
+--PERCENT POSITIVE REVIEWS BY RELEASE YEAR -- INCLUDE % INCREASE AND DECREASE YEAR-OVER-YEAR
+--Create View reviews_by_year AS
+	--SELECT
+	--	DATEPART(YYYY, release_date) AS y,
+	--	COUNT(appid) AS games_released,
+	--	ROUND(AVG(100.0 * positive_ratings / (positive_ratings + negative_ratings)), 3) AS average_positive_review_percentage_for_all_games,
+	--	SUM(positive_ratings + negative_ratings) AS total_reviews_count
+	--FROM games
+	--WHERE 
+	--	positive_ratings + negative_ratings >= 1000
+	--	AND DATEPART(YYYY, release_date) < 2019
+	--GROUP BY DATEPART(YYYY, release_date)
+	--HAVING COUNT(appid) >= 20
+	--ORDER BY 1 ASC;
+
+
+--QUERIES EXCLUDED FROM TABLEAU VISUALIZATIONS FOR NOW
+--NUMBER OF GAMES BY DEVELOPER
+--Create View games_by_developer AS
+	--SELECT
+	--	developer,
+	--	COUNT(appid) AS games_count
+	--FROM games
+	--GROUP BY developer
+	--ORDER BY 2 DESC;
+
+--DEVELOPERS RANKED BY AVERAGE PERCENTAGE OF POSITIVE REVIEWS OF THEIR GAMES
+--Create View top_game_developers AS
+	--SELECT
+	--	developer,
+	--	COUNT(DISTINCT(name)) AS games_developed,
+	--	ROUND(AVG(100.0 * positive_ratings / (positive_ratings + negative_ratings)), 3) AS average_percent_positive_reviews,
+	--	SUM(positive_ratings + negative_ratings) AS total_reviews_count
+	--FROM games
+	--GROUP BY developer
+	--HAVING
+	--	COUNT(DISTINCT(name)) >= 3
+	--	AND SUM(positive_ratings + negative_ratings) >= 5000
+	--ORDER BY 3 DESC
+
+--MOST DISAPPOINTING GAMES (AT LEAST 50,000 REVIEWS WITH AVERAGE REVIEW SCORE BELOW 50%)
+--Create View most_disappointing_games AS
+--	SELECT
+--		name AS game,
+--		developer,
+--		ROUND(100.0 * positive_ratings / (positive_ratings + negative_ratings), 2) AS percent_positive_reviews
+--	FROM games
+--	WHERE
+--		positive_ratings + negative_ratings >= 10000
+--		AND 100.0 * positive_ratings / (positive_ratings + negative_ratings) < 50
+--	ORDER BY 3 DESC;
+
+--GAMES RELEASED BY MONTH
+--Create View games_released_by_month AS
+--	SELECT
+--		DATEPART(YYYY, release_date) AS y,
+--		DATEPART(MM, release_date) AS m,
+--		COUNT(appid) AS games_released,
+--		ROUND(AVG(100.0 * positive_ratings / (positive_ratings + negative_ratings)), 3) AS average_positive_review_percentage_for_all_games,
+--		SUM(positive_ratings + negative_ratings) AS total_reviews_count
+--	FROM games
+--	WHERE 
+--		positive_ratings + negative_ratings >= 1000
+--		AND DATEPART(YYYY, release_date) < 2019
+--	GROUP BY DATEPART(YYYY, release_date), DATEPART(MM, release_date)
+--	ORDER BY 1 ASC, 2 ASC;
+
+--Create View nudity_games AS 
+--		WITH nudity_games_stats AS (
+--			SELECT
+--				DATEPART(YYYY, release_date) AS y,
+--				COUNT(DISTINCT(CASE WHEN nudity >= 20 THEN t.appid END)) AS nudity_games,
+--				COUNT(*) AS all_games
+--			FROM games g
+--			LEFT JOIN tags t
+--			ON g.appid = t.appid
+--			WHERE 
+--				DATEPART(YYYY, release_date) < 2019
+--			GROUP BY DATEPART(YYYY, release_date)
+--			)
+--			SELECT
+--				y,
+--				nudity_games,
+--				all_games,
+--				100.0 * nudity_games / all_games AS percentage_with_nudity
+--			FROM nudity_games_stats
+		--	ORDER BY 1 ASC
+
+--Create View simulation_games AS 
+	--WITH simulation_games_stats AS (
+	--	SELECT
+	--		DATEPART(YYYY, release_date) AS y,
+	--		COUNT(DISTINCT(CASE WHEN simulation >= 20 THEN tt.appid END)) AS simulation_games,
+	--		COUNT(*) AS all_games
+	--	FROM games g
+	--	LEFT JOIN tags_two tt
+	--	ON g.appid = tt.appid
+	--	WHERE 
+	--		DATEPART(YYYY, release_date) < 2019
+	--	GROUP BY DATEPART(YYYY, release_date)
+	--	)
+	--	SELECT
+	--		y,
+	--		simulation_games,
+	--		all_games,
+	--		100.0 * simulation_games / all_games AS percentage_simulations
+	--	FROM simulation_games_stats
+	--	ORDER BY 1 ASC
+
+--Create View violent_games AS
+--	WITH violent_games_stats AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN violent >= 20 OR gore >= 20 OR blood >= 20 THEN tt.appid END)) AS violent_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN tags t 
+--		ON g.appid = t.appid
+--		LEFT JOIN tags_two tt
+--		ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			violent_games,
+--			all_games,
+--			100.0 * violent_games / all_games AS percentage_with_violence
+--		FROM violent_games_stats
+--		ORDER BY 1 ASC
+
+--Create View shooting_games AS
+--	WITH shooting_game_stats AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN shooter >= 20 THEN tt.appid END)) AS shooting_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN tags_two tt
+--		ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			shooting_games,
+--			all_games,
+--			100.0 * shooting_games / all_games AS percentage_with_violence
+--		FROM shooting_game_stats
+		--ORDER BY 1 ASC
+
+--Create View sexual_content_and_nudity AS
+--	WITH games_with_sexual_content_and_nudity AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN sexual_content >= 20 AND nudity >= 20 THEN tt.appid END)) AS sexual_content_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			sexual_content_games,
+--			all_games,
+--			100.0 * sexual_content_games / all_games AS percentage_games_with_sexual_content
+--		FROM games_with_sexual_content_and_nudity
+		--ORDER BY 1 ASC
+
+--Create View sexual_content_only AS
+--	WITH games_with_sexual_content_only AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN sexual_content >= 20 THEN tt.appid END)) AS sexual_content_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			sexual_content_games,
+--			all_games,
+--			100.0 * sexual_content_games / all_games AS percentage_games_with_sexual_content_only
+--		FROM games_with_sexual_content_only
+		--ORDER BY 1 ASC
+
+--Create View nudity_only AS
+--	WITH games_with_nudity_only AS (
+--		SELECT
+--			DATEPART(YYYY, release_date) AS y,
+--			COUNT(DISTINCT(CASE WHEN nudity >= 20 THEN t.appid END)) AS nudity_games,
+--			COUNT(*) AS all_games
+--		FROM games g
+--		LEFT JOIN 
+--			tags t
+--			ON g.appid = t.appid
+--		LEFT JOIN 
+--			tags_two tt
+--			ON g.appid = tt.appid
+--		WHERE 
+--			DATEPART(YYYY, release_date) < 2019
+--		GROUP BY DATEPART(YYYY, release_date)
+--		)
+--		SELECT
+--			y,
+--			nudity_games,
+--			all_games,
+--			100.0 * nudity_games / all_games AS percentage_games_with_nudity_only
+--		FROM games_with_nudity_only
+		--ORDER BY 1 ASC
